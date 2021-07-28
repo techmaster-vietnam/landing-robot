@@ -375,6 +375,16 @@ a{
   min-height: 50px;
 }
 
+.section .section_container .content .content_details li{
+  font-family:  Open Sans, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  line-height: 2.3rem;
+  min-height: 50px;
+  color: #000;
+}
+
 .intro .image{
   order: 0;
 }

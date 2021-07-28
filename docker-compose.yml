@@ -1,5 +1,4 @@
 version: "3.3"
-
 networks:
   techmaster-jitsi:
     external: true
@@ -15,7 +14,8 @@ services:
           - node.role == manager
           - node.hostname == ubuntu
       labels:
-        - traefik.port=80
+        - traefik.port=8382
         - "traefik.enable=true"
+        - "traefik.backend=game"
         - "traefik.frontend.rule=Host:codegame.techmaster.vn"
         - "traefik.docker.network=techmaster-jitsi"

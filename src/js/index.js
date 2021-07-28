@@ -1,3 +1,4 @@
+import "../css/index.css"
 let bar = document.getElementById("bar");
 let navbar = document.getElementById("nav-bar");
 let closebar = document.getElementById("close-bar");

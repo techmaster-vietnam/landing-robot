@@ -1024,6 +1024,11 @@ border-bottom: 10px solid transparent;
   position: absolute;
 }
 
+.contact_button div{
+  font-family: Open Sans, sans-serif;
+  font-size: 20px;
+}
+
 .contact_button button{
   background-color: #1C299C;
   border-style: none;
@@ -1046,7 +1051,7 @@ border-bottom: 10px solid transparent;
 
 @media (max-width: 768px){
   .contact_container .contact_info{
-      width: calc(60% - 10px);
+      width: calc(60% - 20px);
       padding: 10px 10px 0px 10px;
   }
 

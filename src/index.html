@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lộ trình khóa học Lập trình Game bằng Javascript">
     <meta name="keywords" content="Game, JavaScript, Khóa Online">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
     <title>Lộ trình khóa học Lập trình Game bằng Javascript</title>
     <!-- <link href="css/index.css" rel="stylesheet"> -->
 </head>
@@ -16,7 +17,9 @@
         <div class="nav_bar">
             <div class="nav_bar_container">
                 <div class="logo">
-                    <img src="img/logo-white.png">
+                    <a href = "https://techmaster.vn/">
+                        <img src="img/logo-white.png">
+                    </a>
                 </div>
                 <div class="nav_menu">
                     <div class="nav_category">
@@ -154,7 +157,7 @@
     <div class="target section" id="target">
         <div class="section_container">
             <div class="intro_image image">
-                <img src="img/target (2).jpg">
+                <img src="img/target.svg">
             </div>
             <div class="intro_content content">
                 <div class="content_section_container">
@@ -202,7 +205,7 @@
                     </div>
                     <div class="track_container">
                         <div class="track_content">
-                            <div class="title">Javascript căn bản</div>
+                            <div class="title">Javascript căn bản (6 buổi)</div>
                             <div class="list">
                                 <ul>
                                     <li>Giới thiệu Javascript.</li>
@@ -229,7 +232,7 @@
                     <div class="track_container">
                         <div class="track_content">
                             <div class="title">
-                                Lập trình Game với DOM</div>
+                                Lập trình Game với DOM (12 buổi)</div>
                             <div class="list">
                                 <ul>
                                     <li>Giới thiệu về Javascript DOM</li>
@@ -255,7 +258,7 @@
                     <div class="track_container">
                         <div class="track_content">
                             <div class="title">
-                                Lập trình game với Canvas</div>
+                                Lập trình game với Canvas (12 buổi)</div>
                             <div class="list">
                                 <ul>
                                     <li>Giới thiệu về Canvas</li>
@@ -496,7 +499,10 @@
                                 Địa chỉ
                             </div>
                             <div class="content">
-                                Tầng 12A(13), Viwaseen Tower, 48 Phố Tố Hữu, Trung Văn, Nam Từ Liêm, Hà Nội
+                                Địa chỉ 1: Tầng 12A(13), Viwaseen Tower, 48 Phố Tố Hữu, Trung Văn, Nam Từ Liêm, Hà Nội
+                            </div>
+                            <div class="content">
+                                Địa chỉ 2: Số 14, ngõ 4, Nguyễn Đình Chiểu, Hà Nội
                             </div>
                         </div>
                     </div>
@@ -509,7 +515,7 @@
                                 Hotline/Zalo
                             </div>
                             <div class="content large_letter" style="font-weight: 600">
-                                0963023185 (Ms. Mẫn)
+                                0987273764 (Mr. Thịnh)
                             </div>
                         </div>
                     </div>
@@ -522,21 +528,29 @@
                                 Email
                             </div>
                             <div class="content large_letter" style="font-weight: 600">
-                                manpham@techmaster.vn
+                                thinh@techmaster.vn
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="contact_form">
-                    <textarea class="inputText" id="data-message" placeholder="*Họ và tên"></textarea>
-                    <textarea class="inputText" id="data-message" placeholder="*Số điện thoại"></textarea>
-                    <textarea class="inputText" id="data-message" placeholder="Email"></textarea>
-                    <textarea class="inputText" id="data-message" placeholder="Ghi chú"
+                    <textarea class="inputText" id="name" placeholder="*Họ và tên"></textarea>
+                    <textarea class="inputText" id="phone" placeholder="*Số điện thoại"></textarea>
+                    <textarea class="inputText" id="email" placeholder="Email"></textarea>
+                    <textarea class="inputText" id="note" placeholder="Ghi chú"
                         style="padding-bottom: 50px; margin-bottom: 0;"></textarea>
-                    <div class="contact_button">
+                    <div class="contact_button" id = "btn-register">
                         <button>
                             Đăng ký
                         </button>
+                        <div id="success" style="display: none; margin-top: 1rem;">
+                            <i style="color: rgb(0, 165, 0)" class="fas fa-check fa-fw"></i> 
+                                Đăng ký thành công
+                        </div>
+                        <div id="error" style="display: none; margin-top: 1rem;">
+                            <i style="color: rgb(255, 44, 44)" class="fas fa-times fa-fw"></i> 
+                            <span id="message"></span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -549,5 +563,6 @@
 
     <!-- <script src = "js/index.js"></script> -->
 </body>
+
 
 </html>

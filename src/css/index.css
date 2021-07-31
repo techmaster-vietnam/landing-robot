@@ -8,6 +8,10 @@ body{
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a{
   text-decoration: none;
 }
@@ -778,6 +782,7 @@ border-bottom: 10px solid transparent;
   font-size: 18px;
   letter-spacing: 0.05rem;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px){
@@ -892,8 +897,14 @@ border-bottom: 10px solid transparent;
   border-width: 2px;
   text-align: center;
   border-radius: 10px;
+  transition: 0.5s;
+  background-color: #fff;
 }
 
+.video_container .video  .video_name:hover{
+  color: #fff;
+  background-color: #1C299C;
+}
 
 @media (max-width: 768px){
   .video_container .video{

@@ -4,9 +4,6 @@ let navbar = document.getElementById("nav-bar");
 let closebar = document.getElementById("close-bar");
 let body = document.querySelector("body");
 let linklist = document.getElementById("link-list");
-console.log(body);
-console.log(navbar);
-console.log(bar);
 
 let flag = false;
 
@@ -98,7 +95,7 @@ document.getElementById("btn-register").addEventListener(
                 let myJSON = JSON.stringify(req);
 
                 $.ajax({
-                    url: "/submit-advisory",
+                    url: "https://techmaster.vn/submit-advisory",
                     type: "POST",
                     contentType: "application/json; charset=utf-8",
                     data: myJSON,

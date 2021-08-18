@@ -6,7 +6,10 @@ func main() {
   app := fiber.New()
 
 
-  app.Static("/", "./dist") 
+  app.Static("/","./dist",fiber.Static{
+		Compress: true,
+		MaxAge: 8760 * 3600,
+	})
 
   app.Get("/", func(c *fiber.Ctx) error {
 	return c.Render("index", fiber.Map{})

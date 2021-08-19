@@ -675,12 +675,19 @@
             </div>
             <div class="contact_details">
               <div class="contact_icon">
-                <img class="lazyload" data-src="img/location2.svg" alt="icon" />
+                <img
+                  class="lazyload lazyload-img"
+                  width="17"
+                  height="17"
+                  data-src="img/location2.svg"
+                  alt="icon"
+                />
               </div>
               <div class="contact_content">
                 <div class="title">Địa chỉ</div>
                 <div class="content">
-                  <a class="customLink"
+                  <a
+                    class="customLink"
                     href="https://www.google.com/maps/place/48+P.+T%E1%BB%91+H%E1%BB%AFu,+Trung+V%C4%83n,+T%E1%BB%AB+Li%C3%AAm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@20.998029,105.7924504,17z/data=!3m1!4b1!4m5!3m4!1s0x3135acba8ad197a5:0xa55e51322131e722!8m2!3d20.998029!4d105.7946391?hl=vi-VN"
                     target="_blank"
                     >1. Cơ sở Tố Hữu: Tầng 12A, tòa nhà Viwaseen Tower, số 48,
@@ -688,7 +695,8 @@
                   >
                 </div>
                 <div class="content">
-                  <a class="customLink"
+                  <a
+                    class="customLink"
                     href="https://www.google.com/maps/place/Techmaster/@21.013604,105.8443263,17z/data=!3m1!4b1!4m5!3m4!1s0x3135ab8ea079c829:0x1a3ebe79efa873b2!8m2!3d21.013604!4d105.846515?hl=vi-VN"
                     target="_blank"
                     >2. Cơ sở Nguyễn Đình Chiểu: Số 14, ngõ 4, Nguyễn Đình
@@ -700,7 +708,9 @@
             <div class="contact_details">
               <div class="contact_icon">
                 <img
-                  class="lazyload"
+                  class="lazyload lazyload-img"
+                  width="17"
+                  height="17"
                   data-src="img/phone-call.svg"
                   alt="icon"
                 />
@@ -708,18 +718,28 @@
               <div class="contact_content">
                 <div class="title">Hotline/Zalo</div>
                 <div class="content large_letter" style="font-weight: 600">
-                  <a class="customLink" href="tel:0987273764">098 727 3764 (Mr. Thịnh)</a>
+                  <a class="customLink" href="tel:0987273764"
+                    >098 727 3764 (Mr. Thịnh)</a
+                  >
                 </div>
               </div>
             </div>
             <div class="contact_details" style="margin-bottom: 0">
               <div class="contact_icon">
-                <img class="lazyload" data-src="img/email.svg" alt="icon" />
+                <img
+                  class="lazyload lazyload-img"
+                  width="17"
+                  height="17"
+                  data-src="img/email.svg"
+                  alt="icon"
+                />
               </div>
               <div class="contact_content">
                 <div class="title">Email</div>
                 <div class="content large_letter" style="font-weight: 600">
-                  <a class="customLink" href="mailto:thinh@techmaster.vn">thinh@techmaster.vn</a>
+                  <a class="customLink" href="mailto:thinh@techmaster.vn"
+                    >thinh@techmaster.vn</a
+                  >
                 </div>
               </div>
             </div>
@@ -762,7 +782,23 @@
 
     <div id="successModal">
       <div id="successModal-content">
-        <img src="./img/nintendo-min.png" alt="icon" class="successImg" />
+        <picture>
+          <source
+            data-srcset="img/nintendo-full.png"
+            media="(min-width: 1366px)"
+          />
+          <source
+            data-srcset="img/nintendo-min.webp"
+            media="(max-width: 1365px)"
+          />
+          <img
+            width="255"
+            height="293"
+            data-src="img/nintendo-min.png"
+            alt="nintendo"
+            class="lazyload lazyload-img successImg"
+          />
+        </picture>
         <h3>Đăng ký thành công!</h3>
         <p>TechMaster sẽ liên lạc với bạn trong thời gian sớm nhất!</p>
       </div>

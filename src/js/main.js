@@ -1,5 +1,6 @@
 import "../css/style.css";
 import "lazysizes";
+import { Modal } from "bootstrap";
 
 //passive scroll Jquery
 jQuery.event.special.touchstart = {
@@ -51,104 +52,103 @@ closebar.onclick = function () {
   }, 200);
 };
 
-document.getElementById("btn-register").addEventListener(
-  "click",
-  (function (e) {
-    const name = document.getElementById("name");
-    const phone = document.getElementById("phone");
-    const email = document.getElementById("email");
-    const note = document.getElementById("note");
-    const success = document.getElementById("success");
-    const error = document.getElementById("error");
-    const msg = document.getElementById("message");
+function checkValid(name, phone, email) {
+  let valid = true;
 
-    console.log("hello");
+  const nameMessage = document.querySelector(".name-message");
+  const phoneMessage = document.querySelector(".phone-message");
+  const emailMessage = document.querySelector(".email-message");
 
-    function checkValid() {
-      let valid = true;
-      if (name.value.trim() == "") {
-        name.classList.remove("is-valid");
-        name.classList.add("is-invalid");
+  if (name.value.trim() == "") {
+    name.classList.remove("valid");
+    name.classList.add("invalid");
+    nameMessage.innerText = "Vui lòng nhập đúng họ tên";
+    valid = false;
+  } else {
+    name.classList.remove("invalid");
+    name.classList.add("valid");
+    nameMessage.innerText = "";
+  }
 
-        valid = false;
-      } else {
-        name.classList.remove("is-invalid");
-        name.classList.add("is-valid");
-      }
+  if (phone.value.trim() == "") {
+    phone.classList.remove("valid");
+    phone.classList.add("invalid");
+    phoneMessage.innerText = "Vui lòng nhập đúng số điện thoại";
+    valid = false;
+  } else {
+    phone.classList.remove("invalid");
+    phone.classList.add("valid");
+    phoneMessage.innerText = "";
+  }
 
-      if (phone.value.trim() == "") {
-        phone.classList.remove("is-valid");
-        phone.classList.add("is-invalid");
+  if (email.value.trim() == "") {
+    email.classList.remove("valid");
+    email.classList.add("invalid");
+    emailMessage.innerText = "Vui lòng nhập đúng email";
+    valid = false;
+  } else {
+    email.classList.remove("invalid");
+    email.classList.add("valid");
+    emailMessage.innerText = "";
+  }
 
-        valid = false;
-      } else {
-        phone.classList.remove("is-invalid");
-        phone.classList.add("is-valid");
-      }
+  return valid;
+}
 
-      if (email.value.trim() == "") {
-        email.classList.remove("is-valid");
-        email.classList.add("is-invalid");
+function toggleModal() {
+  const body = document.querySelector("body");
+  successModal.classList.toggle("showUp");
+  body.classList.toggle("preventScroll");
+}
 
-        valid = false;
-      } else {
-        email.classList.remove("is-invalid");
-        email.classList.add("is-valid");
-      }
+const successModal = document.getElementById("successModal");
+successModal.addEventListener("click", function () {
+  toggleModal();
+});
 
-      return valid;
-    }
+document.getElementById("btn-register").addEventListener("click", function (e) {
+  const name = document.getElementById("name");
+  const phone = document.getElementById("phone");
+  const email = document.getElementById("email");
+  const note = document.getElementById("note");
 
-    return function (e) {
-      e.preventDefault();
-      e.stopPropagation();
+  if (checkValid(name, phone, email)) {
+    let nameVal = name.value;
+    let phoneVal = phone.value;
+    let emailVal = email.value;
+    let noteVal = note.value;
 
-      if (checkValid()) {
-        const btn = $(this);
-
-        let nameVal = name.value;
-        let phoneVal = phone.value;
-        let emailVal = email.value;
-        let noteVal = note.value;
-
-        let req = {
-          FullName: nameVal,
-          Email: emailVal,
-          Phone: phoneVal,
-          Info: noteVal,
-          Link: window.location.href,
-          ItemId: "g3t",
-          Type: 1,
-        };
-
-        let myJSON = JSON.stringify(req);
-
-        $.ajax({
-          url: "https://techmaster.vn/submit-advisory",
-          type: "POST",
-          contentType: "application/json; charset=utf-8",
-          data: myJSON,
-          dataType: "json",
-          success: function (data) {
-            name.value = phone.value = email.value = note.value = "";
-            name.classList.remove("is-valid");
-            phone.classList.remove("is-valid");
-            email.classList.remove("is-valid");
-            success.style.display = "inline-block";
-            error.style.display = "none";
-          },
-          error: function (result) {
-            success.style.display = "none";
-            error.style.display = "inline-block";
-            msg.innerText = result.responseJSON.message;
-          },
-        });
-
-        btn.attr("disabled", false);
-      }
+    let req = {
+      FullName: nameVal,
+      Email: emailVal,
+      Phone: phoneVal,
+      Info: noteVal,
+      Link: window.location.href,
+      ItemId: "412",
+      Type: 1,
     };
-  })()
-);
+
+    let myJSON = JSON.stringify(req);
+
+    $.ajax({
+      url: "https://techmaster.vn/submit-advisory",
+      type: "POST",
+      contentType: "application/json; charset=utf-8",
+      data: myJSON,
+      dataType: "json",
+      success: function () {
+        name.value = phone.value = email.value = note.value = "";
+        name.classList.remove("valid");
+        phone.classList.remove("valid");
+        email.classList.remove("valid");
+        toggleModal();
+      },
+      error: function (result) {
+        console.error(result)
+      },
+    });
+  }
+});
 
 let isMaterialVideoLoaded = false;
 /* Lazyload video */

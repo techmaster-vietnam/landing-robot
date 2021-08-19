@@ -67,7 +67,6 @@
       href="img/nintendo-min.png"
       imagesrcset="img/nintendo-full.png 1366w, img/nintendo-min.webp 1365w"
     />
-
   </head>
 
   <body>
@@ -672,7 +671,7 @@
           <div class="contact_info">
             <div class="contact_note">
               Điền và gửi thông tin theo mẫu bên cạnh để nhận tư vấn miễn phí về
-              khóa học lập trình iOS, hoặc liên hệ trực tiếp với chúng tôi theo:
+              khóa học, hoặc liên hệ trực tiếp với chúng tôi theo:
             </div>
             <div class="contact_details">
               <div class="contact_icon">
@@ -681,11 +680,20 @@
               <div class="contact_content">
                 <div class="title">Địa chỉ</div>
                 <div class="content">
-                  Địa chỉ 1: Tầng 12A(13), Viwaseen Tower, 48 Phố Tố Hữu, Trung
-                  Văn, Nam Từ Liêm, Hà Nội
+                  <a class="customLink"
+                    href="https://www.google.com/maps/place/48+P.+T%E1%BB%91+H%E1%BB%AFu,+Trung+V%C4%83n,+T%E1%BB%AB+Li%C3%AAm,+H%C3%A0+N%E1%BB%99i,+Vi%E1%BB%87t+Nam/@20.998029,105.7924504,17z/data=!3m1!4b1!4m5!3m4!1s0x3135acba8ad197a5:0xa55e51322131e722!8m2!3d20.998029!4d105.7946391?hl=vi-VN"
+                    target="_blank"
+                    >1. Cơ sở Tố Hữu: Tầng 12A, tòa nhà Viwaseen Tower, số 48,
+                    Tố Hữu, Lê Văn Lương kéo dài, Hà Nội</a
+                  >
                 </div>
                 <div class="content">
-                  Địa chỉ 2: Số 14, ngõ 4, Nguyễn Đình Chiểu, Hà Nội
+                  <a class="customLink"
+                    href="https://www.google.com/maps/place/Techmaster/@21.013604,105.8443263,17z/data=!3m1!4b1!4m5!3m4!1s0x3135ab8ea079c829:0x1a3ebe79efa873b2!8m2!3d21.013604!4d105.846515?hl=vi-VN"
+                    target="_blank"
+                    >2. Cơ sở Nguyễn Đình Chiểu: Số 14, ngõ 4, Nguyễn Đình
+                    Chiểu, Hà Nội</a
+                  >
                 </div>
               </div>
             </div>
@@ -700,7 +708,7 @@
               <div class="contact_content">
                 <div class="title">Hotline/Zalo</div>
                 <div class="content large_letter" style="font-weight: 600">
-                  0987273764 (Mr. Thịnh)
+                  <a class="customLink" href="tel:0987273764">098 727 3764 (Mr. Thịnh)</a>
                 </div>
               </div>
             </div>
@@ -711,49 +719,52 @@
               <div class="contact_content">
                 <div class="title">Email</div>
                 <div class="content large_letter" style="font-weight: 600">
-                  thinh@techmaster.vn
+                  <a class="customLink" href="mailto:thinh@techmaster.vn">thinh@techmaster.vn</a>
                 </div>
               </div>
             </div>
           </div>
           <div class="contact_form">
-            <textarea
+            <input
+              type="text"
               class="inputText"
               id="name"
-              placeholder="*Họ và tên"
-            ></textarea>
-            <textarea
+              placeholder="* Họ tên"
+            />
+            <div class="message name-message"></div>
+            <input
+              type="text"
               class="inputText"
               id="phone"
-              placeholder="*Số điện thoại"
-            ></textarea>
-            <textarea
+              placeholder="* Số điện thoại"
+            />
+            <div class="message phone-message"></div>
+            <input
+              type="text"
               class="inputText"
               id="email"
-              placeholder="Email"
-            ></textarea>
+              placeholder="* Email"
+            />
+            <div class="message email-message"></div>
             <textarea
               class="inputText"
               id="note"
               placeholder="Ghi chú"
-              style="padding-bottom: 50px; margin-bottom: 0"
             ></textarea>
+            <div class="message"></div>
             <div class="contact_button" id="btn-register">
               <button>Đăng ký</button>
-              <div id="success" style="display: none; margin-top: 1rem">
-                <i style="color: rgb(0, 165, 0)" class="fas fa-check fa-fw"></i>
-                Đăng ký thành công
-              </div>
-              <div id="error" style="display: none; margin-top: 1rem">
-                <i
-                  style="color: rgb(255, 44, 44)"
-                  class="fas fa-times fa-fw"
-                ></i>
-                <span id="message"></span>
-              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="successModal">
+      <div id="successModal-content">
+        <img src="./img/nintendo-min.png" alt="icon" class="successImg" />
+        <h3>Đăng ký thành công!</h3>
+        <p>TechMaster sẽ liên lạc với bạn trong thời gian sớm nhất!</p>
       </div>
     </div>
 

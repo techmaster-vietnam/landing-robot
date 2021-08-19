@@ -68,7 +68,16 @@
         <div class="nav_bar_container">
           <div class="logo">
             <a href="https://techmaster.vn/" target="_blank">
-              <img class="lazyload" data-src="img/logo-white.png" alt="logo" />
+              <picture>
+                <source data-srcset="img/logo-white-min.webp" />
+                <img
+                  width="130"
+                  height="48"
+                  class="lazyload lazyload-img"
+                  data-src="img/logo-white-min.png"
+                  alt="logo"
+                />
+              </picture>
             </a>
           </div>
           <div class="nav_menu">
@@ -93,16 +102,37 @@
           </div>
         </div>
         <div class="menu_icon" id="bar">
-          <img class="lazyload" data-src="img/menu.svg" alt="menu" />
+          <img
+            class="lazyload lazyload-img"
+            width="30"
+            height="30"
+            data-src="img/menu.svg"
+            alt="menu"
+          />
         </div>
       </div>
 
       <div class="nav-bar" id="nav-bar">
         <div class="logo">
-          <img class="lazyload" data-src="img/logo.png" alt="logo" />
+          <picture>
+            <source data-srcset="img/logo-blue-min.webp" />
+            <img
+              width="100"
+              height="56"
+              class="lazyload lazyload-img"
+              data-src="img/logo-blue-min.png"
+              alt="logo"
+            />
+          </picture>
         </div>
         <div class="close" id="close-bar">
-          <img class="lazyload" data-src="img/delete.svg" alt="close menu" />
+          <img
+            class="lazyload lazyload-img"
+            width="13"
+            height="13"
+            data-src="img/delete.svg"
+            alt="close menu"
+          />
         </div>
         <div class="link_list" id="link-list">
           <div class="nav_category">
@@ -129,13 +159,23 @@
       <div class="content">
         <div class="content_container">
           <div class="banner">
-            <img class="lazyload" data-src="img/banner.svg" alt="banner" />
+            <img
+              width="255"
+              height="183"
+              class="lazyload lazyload-img"
+              data-src="img/banner.svg"
+              alt="banner"
+            />
           </div>
           <div class="image">
             <picture>
               <source
                 data-srcset="img/nintendo-full.png"
                 media="(min-width: 1366px)"
+              />
+              <source
+                data-srcset="img/nintendo-min.webp"
+                media="(max-width: 1365px)"
               />
               <img
                 width="255"
@@ -153,14 +193,26 @@
       <div class="benefit_container">
         <div class="benefit_content">
           <div class="benefit_icon">
-            <img class="lazyload" data-src="img/user.svg" alt="icon" />
+            <img
+              class="lazyload lazyload-img"
+              width="60"
+              height="60"
+              data-src="img/user.svg"
+              alt="icon"
+            />
           </div>
           <div class="benefit_header">Đối tượng đào tạo</div>
           <div class="benefit_details">Bắt đầu học lập trình từ con số 0</div>
         </div>
         <div class="benefit_content">
           <div class="benefit_icon">
-            <img class="lazyload" data-src="img/location.svg" alt="icon" />
+            <img
+              class="lazyload lazyload-img"
+              width="60"
+              height="60"
+              data-src="img/location.svg"
+              alt="icon"
+            />
           </div>
           <div class="benefit_header">Mọi lúc, mọi nơi</div>
           <div class="benefit_details">
@@ -169,7 +221,13 @@
         </div>
         <div class="benefit_content">
           <div class="benefit_icon">
-            <img class="lazyload" data-src="img/console.svg" alt="icon" />
+            <img
+              class="lazyload lazyload-img"
+              width="60"
+              height="60"
+              data-src="img/console.svg"
+              alt="icon"
+            />
           </div>
           <div class="benefit_header">Xu hướng công nghệ</div>
           <div class="benefit_details">
@@ -178,7 +236,13 @@
         </div>
         <div class="benefit_content">
           <div class="benefit_icon">
-            <img class="lazyload" data-src="img/online-course.svg" alt="icon" />
+            <img
+              class="lazyload lazyload-img"
+              width="60"
+              height="60"
+              data-src="img/online-course.svg"
+              alt="icon"
+            />
           </div>
           <div class="benefit_header">Giảng viên giỏi</div>
           <div class="benefit_details">
@@ -222,7 +286,13 @@
     <div class="target section" id="target">
       <div class="section_container">
         <div class="intro_image image">
-          <img class="lazyload" data-src="img/target.svg" alt="icon" />
+          <img
+            class="lazyload lazyload-img"
+            width="286"
+            height="284"
+            data-src="img/target.svg"
+            alt="icon"
+          />
         </div>
         <div class="intro_content content">
           <div class="content_section_container">
@@ -374,7 +444,9 @@
               <div class="teacher_info_container">
                 <div class="teacher_img">
                   <img
-                    class="lazyload"
+                    class="lazyload lazyload-img"
+                    width="90"
+                    height="90"
                     data-src="img/teachers/gvCuong.webp"
                     alt="thầy giáo Cường"
                   />
@@ -403,7 +475,9 @@
               <div class="teacher_info_container">
                 <div class="teacher_img">
                   <img
-                    class="lazyload"
+                    class="lazyload lazyload-img"
+                    width="90"
+                    height="90"
                     data-src="img/teachers/mr-hien-min.jpg"
                     alt="thầy giáo Hiên"
                   />
@@ -427,7 +501,9 @@
               <div class="teacher_info_container">
                 <div class="teacher_img">
                   <img
-                    class="lazyload"
+                    class="lazyload lazyload-img"
+                    width="90"
+                    height="90"
                     data-src="img/teachers/mr-ba-min.jpg"
                     alt="thầy giáo Ba"
                   />
@@ -501,13 +577,25 @@
         <div class="product_container">
           <div class="product">
             <a href="https://vietbacneu.github.io/DeAnGameBYVietBac/">
-              <img class="lazyload" data-src="img/game demo/1.JPG" alt="icon" />
+              <img
+                class="lazyload lazyload-img"
+                width="286"
+                height="194"
+                data-src="img/game demo/1.JPG"
+                alt="icon"
+              />
               <div class="product_name">GAME AI LÀ TRIỆU PHÚ</div>
             </a>
           </div>
           <div class="product">
             <a href="https://quanghoang8.github.io/PluszleGame/">
-              <img class="lazyload" data-src="img/game demo/2.JPG" alt="icon" />
+              <img
+                class="lazyload lazyload-img"
+                width="286"
+                height="194"
+                data-src="img/game demo/2.JPG"
+                alt="icon"
+              />
               <div class="product_name">GAME PLUSZLE</div>
             </a>
           </div>
@@ -515,13 +603,25 @@
             <a
               href="https://namtien97.github.io/learn_js_by_game/memory_game/v2/index.html"
             >
-              <img class="lazyload" data-src="img/game demo/3.JPG" alt="icon" />
+              <img
+                class="lazyload lazyload-img"
+                width="286"
+                height="194"
+                data-src="img/game demo/3.JPG"
+                alt="icon"
+              />
               <div class="product_name">MEMORY GAME</div>
             </a>
           </div>
           <div class="product">
             <a href=" https://minhquang110786.github.io/GameBoard/index.html">
-              <img class="lazyload" data-src="img/game demo/4.JPG" alt="icon" />
+              <img
+                class="lazyload lazyload-img"
+                width="286"
+                height="194"
+                data-src="img/game demo/4.JPG"
+                alt="icon"
+              />
               <div class="product_name">GAME DÒ MÌN</div>
             </a>
           </div>

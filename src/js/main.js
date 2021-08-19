@@ -81,7 +81,7 @@ function checkValid(name, phone, email) {
     phoneMessage.innerText = "";
   }
 
-  if (email.value.trim() == "" || !email.includes("@")) {
+  if (email.value.trim() == "" || !email.value.includes("@")) {
     email.classList.remove("valid");
     email.classList.add("invalid");
     emailMessage.innerText = "Vui lòng nhập đúng email";

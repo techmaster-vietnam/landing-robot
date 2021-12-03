@@ -42,26 +42,6 @@ jobs:
 
       - name: Verify
         run: echo ${{ steps.docker_build.outputs.digest }}
-      
-      - name: Deploy Stage
-        uses: fjogeleit/http-request-action@master
-        id: deploy
-        with:
-          url: '${{ secrets.WEBHOOK_URL }}'
-          method: 'POST'
 
       - name: Show Response
         run: echo ${{ steps.deploy.outputs.response }}
-
-      - name: Send mail
-        if: always()
-        uses: dawidd6/action-send-mail@v2
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: Build ${{ github.repository }} - Status ${{ job.status }}
-          body: Build ${{ github.repository }} - Status ${{ job.status }}
-          to: hien@techmaster.vn
-          from: Techmaster Devops

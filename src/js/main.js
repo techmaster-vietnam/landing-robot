@@ -124,7 +124,7 @@ document.getElementById("btn-register").addEventListener("click", function (e) {
       Phone: phoneVal,
       Info: noteVal,
       Link: window.location.href,
-      ItemId: "412",
+      // ItemId: "412",
       Type: 1,
     };
 

@@ -1,4 +1,4 @@
-name: CI CD Techmaster Landing Page Game
+# name: CI CD Techmaster Landing Page Game
 on:
   push:
     branches: [ master ]
@@ -36,7 +36,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: registry.techmaster.vn/techmaster-game:latest
+          # tags: registry.techmaster.vn/techmaster-game:latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 

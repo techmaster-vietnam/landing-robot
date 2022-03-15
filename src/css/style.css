@@ -12,7 +12,7 @@ a {
 }
 
 .header {
-  background-color: #1c299c;
+  background-color: #002E50;
   box-sizing: border-box;
   padding-bottom: 50px;
 }
@@ -27,7 +27,7 @@ a {
 
 .header .nav_bar .nav_bar_container {
   display: flex;
-  width: 85%;
+  width: 100%;
   justify-content: space-between;
   max-width: 1200px;
 }
@@ -155,7 +155,7 @@ a {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 30px;
+  padding: 0 30px 30px 30px;
 }
 
 .header .content .banner {
@@ -163,10 +163,12 @@ a {
 }
 
 .header .content .content_container {
-  width: 85%;
+  width: 100%;
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .header .content .banner img {
@@ -174,11 +176,47 @@ a {
 }
 
 .header .content .image {
-  width: 40%;
+  width: 50%;
+  box-sizing: border-box;
+  margin-left: -10%;
 }
 
 .header .content .image img {
   width: 100%;
+}
+
+
+.header .content .image .description{
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.header .content .image .description .item{
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: -0px;
+}
+
+.header .content .image .description .item .icon{
+  width: 20px;
+}
+
+.header .content .image .description .item .icon img{
+  width: 100%;
+}
+
+.header .content .image .description .text{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  line-height: 2.3rem;
+  min-height: 50px;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 0 0 0px 20px;
+  width: calc(100% - 20px);
+  opacity: 90%;
 }
 
 @media (max-width: 1024px) {
@@ -358,7 +396,7 @@ a {
   text-transform: uppercase;
   font-size: 35px;
   margin-bottom: 20px;
-  color: #1c299c;
+  color: #005FA5;
 }
 
 .section .section_container .content .content_details {
@@ -449,7 +487,7 @@ a {
   text-transform: uppercase;
   font-size: 35px;
   margin-bottom: 20px;
-  color: #1c299c;
+  color: #005FA5;
   text-align: left;
 }
 
@@ -468,6 +506,14 @@ a {
   max-width: 1200px;
   padding: 0px 40px;
   box-sizing: border-box;
+}
+
+.display_container .course_image{
+  width: 100%;
+}
+
+.display_container .course_image img{
+  width: 100%;
 }
 
 .display_container .course_content_container {
@@ -525,7 +571,7 @@ a {
   text-transform: uppercase;
   font-size: 25px;
   margin-bottom: 20px;
-  color: #1c299c;
+  color: #005FA5;
   text-align: left;
 }
 
@@ -641,8 +687,7 @@ a {
 }
 
 .teacher_container .teacher {
-  width: calc(33.33% - 40px);
-  min-height: 240px;
+  width: calc(25% - 40px);
   box-sizing: border-box;
   padding: 40px 20px 40px 20px;
   background-color: #fff;
@@ -651,7 +696,7 @@ a {
   border-radius: 10px;
   align-items: flex-start;
   justify-content: left;
-  min-height: 470px;
+  margin-bottom: 40px;
 }
 
 .teacher_container .teacher .teacher_img {
@@ -677,7 +722,15 @@ a {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 10px;
-  color: #1c299c;
+  color: #005FA5;
+}
+
+.teacher_container .teacher .teacher_details p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  line-height: 2.3rem;
 }
 
 .teacher_container .teacher .teacher_details li {
@@ -807,7 +860,7 @@ a {
   text-transform: uppercase;
   font-size: 22px;
   margin-bottom: 20px;
-  color: #1c299c;
+  color: #005FA5;
 }
 
 .fee_container .fee .fee_content .fee_number {
@@ -820,14 +873,14 @@ a {
   text-transform: uppercase;
   font-size: 40px;
   margin-bottom: 20px;
-  color: #1c299c;
+  color: #005FA5;
 }
 
 .fee_container .fee .fee_content .fee_number .condition {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: 2rem;
-  color: #1c299c;
+  color: #005FA5;
 }
 
 .fee_container .fee .fee_content .fee_button {
@@ -890,9 +943,9 @@ a {
   width: 100%;
   padding: 10px;
   font-family: "Alata", sans-serif;
-  color: #1c299c;
+  color: #005FA5;
   border-style: solid;
-  border-color: #1c299c;
+  border-color: #005FA5;
   border-width: 2px;
   text-align: center;
   border-radius: 10px;
@@ -902,7 +955,7 @@ a {
 
 .product_container .product .product_name:hover {
   color: #fff;
-  background-color: #1c299c;
+  background-color: #005FA5;
 }
 
 @media (max-width: 768px) {
@@ -955,9 +1008,9 @@ a {
   width: 100%;
   padding: 10px;
   font-family: "Alata", sans-serif;
-  color: #1c299c;
+  color: #005FA5;
   border-style: solid;
-  border-color: #1c299c;
+  border-color: #005FA5;
   border-width: 2px;
   text-align: center;
   border-radius: 10px;
@@ -967,7 +1020,7 @@ a {
 
 .video_container .video .video_name:hover {
   color: #fff;
-  background-color: #1c299c;
+  background-color: #005FA5;
 }
 
 @media (max-width: 768px) {
@@ -1042,7 +1095,7 @@ a {
 
 .contact_container .contact_info .contact_details .contact_content .title {
   font-family: "Alata", sans-serif;
-  color: #1c299c;
+  color: #005FA5;
   font-size: 22px;
   text-transform: uppercase;
   padding: 0;
@@ -1073,7 +1126,7 @@ a {
 .contact_container .contact_form .inputText {
   padding: 10px;
   width: 100%;
-  border: 1px solid #1c299c;
+  border: 1px solid #005FA5;
   border-radius: 4px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -1157,7 +1210,7 @@ body.preventScroll {
 }
 
 .contact_button button {
-  background-color: #1c299c;
+  background-color: #005FA5;
   border-style: none;
   box-sizing: border-box;
   padding: 10px 20px;
@@ -1240,7 +1293,7 @@ body.preventScroll {
 }
 
 .footer {
-  background-color: #1c299c;
+  background-color: #005FA5;
   height: 150px;
   display: flex;
   align-items: center;

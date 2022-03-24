@@ -33,6 +33,9 @@ let navbar = document.getElementById("nav-bar");
 let closebar = document.getElementById("close-bar");
 let body = document.querySelector("body");
 let linklist = document.getElementById("link-list");
+let nav_item = document.querySelectorAll(".nav_category");
+
+
 
 let flag = false;
 
@@ -51,6 +54,47 @@ closebar.onclick = function () {
     bar.style.visibility = "inherit";
   }, 200);
 };
+
+
+
+nav_item.forEach(function(btn){
+  btn.addEventListener('click', function() {
+    navbar.style.width = "0px";
+    body.style.overflowY = "inherit";
+    linklist.style.display = "none";
+    setTimeout(function () {
+      bar.style.visibility = "inherit";
+    }, 200);
+  })
+})
+
+
+
+let question_icon = document.querySelectorAll(".question_icon");
+
+question_icon.forEach(function(btn){
+    btn.addEventListener('click', function() {
+        let question_info = this.parentElement.parentElement.querySelector(".question_item");
+        if(question_info.style.display == "block"){
+          question_info.style.display = "none";
+            this.querySelector("img").src = "img/down-arrow.svg"
+            
+        }
+        else if(question_info.style.display == "none"){
+          question_info.style.display = "block";
+            this.querySelector("img").src = "img/up-arrow.svg"
+
+        }
+    })
+})
+
+console.log(question_icon);
+
+question_icon.forEach(function(btn){
+  question_icon.onclick = function(){
+        console.log("hi");
+    }
+})
 
 function checkValid(name, phone, email) {
   let valid = true;
@@ -122,10 +166,10 @@ document.getElementById("btn-register").addEventListener("click", function (e) {
       FullName: nameVal,
       Email: emailVal,
       Phone: phoneVal,
-      Info: noteVal,
+      Note: noteVal,
       Link: window.location.href,
-      // ItemId: "412",
-      Type: 1,
+      // ItemId: "nl2",
+      // Type: 1,
     };
 
     let myJSON = JSON.stringify(req);
@@ -172,39 +216,125 @@ $(window).on("scroll", function () {
 
 let isDemoVideoLoaded = false;
 /* Lazyload video */
-$(window).on("scroll", function () {
-  if (!isDemoVideoLoaded) {
-    var hT = $("#product").offset().top,
-      hH = $("#product").outerHeight(),
-      wH = $(window).height(),
-      wS = $(this).scrollTop();
-    if (wS > hT + hH - wH) {
-      $(".video_container").html(`
-      <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/1oJu87Fw2Pg"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-        <a href="https://www.youtube.com/watch?v=1oJu87Fw2Pg">
-            <div class="video_name">
-                HƯỚNG DẪN LẬP TRÌNH GAME TETRIS
-            </div>
-        </a>
-        </div>
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/gVqWSkYjqeQ"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            <a href="https://www.youtube.com/watch?v=gVqWSkYjqeQ">
-                <div class="video_name">
-                    HƯỚNG DẪN LẬP TRÌNH GAME FLAPPY BIRD
-                </div>
-            </a>
-        </div>
-      `);
-      isDemoVideoLoaded = true;
-    }
-  }
+// $(window).on("scroll", function () {
+//   if (!isDemoVideoLoaded) {
+//     var hT = $("#product").offset().top,
+//       hH = $("#product").outerHeight(),
+//       wH = $(window).height(),
+//       wS = $(this).scrollTop();
+//     if (wS > hT + hH - wH) {
+//       $(".video_container").html(`
+//       <div class="video">
+//         <iframe width="560" height="315" src="https://www.youtube.com/embed/1oJu87Fw2Pg"
+//           title="YouTube video player" frameborder="0"
+//           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//           allowfullscreen>
+//         </iframe>
+//         <a href="https://www.youtube.com/watch?v=1oJu87Fw2Pg">
+//             <div class="video_name">
+//                 HƯỚNG DẪN LẬP TRÌNH GAME TETRIS
+//             </div>
+//         </a>
+//         </div>
+//         <div class="video">
+//             <iframe width="560" height="315" src="https://www.youtube.com/embed/gVqWSkYjqeQ"
+//                 title="YouTube video player" frameborder="0"
+//                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+//                 allowfullscreen></iframe>
+//             <a href="https://www.youtube.com/watch?v=gVqWSkYjqeQ">
+//                 <div class="video_name">
+//                     HƯỚNG DẪN LẬP TRÌNH GAME FLAPPY BIRD
+//                 </div>
+//             </a>
+//         </div>
+//       `);
+//       isDemoVideoLoaded = true;
+//     }
+//   }
+// });
+
+$(window).scroll(function() {
+  var scrollDistance = $(window).scrollTop();
+
+  // Show/hide menu on scroll
+  //if (scrollDistance >= 850) {
+  //		$('nav').fadeIn("fast");
+  //} else {
+  //		$('nav').fadeOut("fast");
+  //}
+
+  // Assign active class to nav links while scolling
+  $('.menu-section').each(function(i) {
+      if (($(this).position().top)<= scrollDistance) {
+          $('.nav_category a.active').removeClass('active');
+          $('.nav_category a').eq(i).addClass('active');
+      }
+  });
+}).scroll();
+
+
+
+var slideIndex = 1;
+
+let dot_bar = document.getElementById("dot_bar");
+var allslides = document.getElementsByClassName("mySlides");
+
+for(let i = 1; i<=allslides.length; i++){
+  dot_bar.innerHTML += `
+    <span class="dot"></span>
+  `
+}
+
+let dot = document.getElementsByClassName("dot");
+
+$.each(dot, function (index, icon) {
+  console.log("index ",  index, icon);
+  icon.addEventListener('click', function(){
+      slideIndex = index + 1;
+      console.log(slideIndex);
+      showSlides(slideIndex);
+    })
 });
+
+
+
+showSlides(slideIndex);
+
+let prev_btn = document.getElementById("prev_btn");
+
+prev_btn.addEventListener('click', function() {
+  slideIndex--;
+  console.log(slideIndex);
+  showSlides(slideIndex);
+})
+
+prev_btn.addEventListener("click", function () {
+  console.log("hello");
+});
+
+let next_btn = document.getElementById("next_btn");
+
+next_btn.addEventListener('click', function() {
+  slideIndex++;
+  console.log(slideIndex);
+  showSlides(slideIndex);
+})
+
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      // console.log("i m called");
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" slide_active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " slide_active";
+}
+

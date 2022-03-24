@@ -13,7 +13,7 @@ a {
 
 .header {
   /* background-color: #002E50; */
-  background-image: linear-gradient(#002E50, rgb(4, 1, 19)  );
+  background-image: linear-gradient( #283e73, #3c602c  );
   box-sizing: border-box;
   padding-bottom: 50px;
 }
@@ -399,7 +399,7 @@ a {
   text-transform: uppercase;
   font-size: 35px;
   margin-bottom: 20px;
-  color: #005FA5;
+  color: #0a7412;
 }
 
 .section .section_container .content .content_details {
@@ -490,7 +490,7 @@ a {
   text-transform: uppercase;
   font-size: 35px;
   margin-bottom: 20px;
-  color: #005FA5;
+  color: #0a7412;
   text-align: left;
 }
 
@@ -574,7 +574,7 @@ a {
   text-transform: uppercase;
   font-size: 25px;
   margin-bottom: 20px;
-  color: #005FA5;
+  color: #0a7412;
   text-align: left;
 }
 
@@ -725,7 +725,7 @@ a {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 10px;
-  color: #005FA5;
+  color: #0a7412;
 }
 
 .teacher_container .teacher .teacher_details p {
@@ -863,7 +863,7 @@ a {
   text-transform: uppercase;
   font-size: 22px;
   margin-bottom: 20px;
-  color: #005FA5;
+  color: #0a7412;
 }
 
 .fee_container .fee .fee_content .fee_number {
@@ -876,14 +876,14 @@ a {
   text-transform: uppercase;
   font-size: 40px;
   margin-bottom: 20px;
-  color: #005FA5;
+  color: #0a7412;
 }
 
 .fee_container .fee .fee_content .fee_number .condition {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: 2rem;
-  color: #005FA5;
+  color: #0a7412;
 }
 
 .fee_container .fee .fee_content .fee_button {
@@ -946,9 +946,9 @@ a {
   width: 100%;
   padding: 10px;
   font-family: "Alata", sans-serif;
-  color: #005FA5;
+  color: #0a7412;
   border-style: solid;
-  border-color: #005FA5;
+  border-color: #0a7412;
   border-width: 2px;
   text-align: center;
   border-radius: 10px;
@@ -958,7 +958,7 @@ a {
 
 .product_container .product .product_name:hover {
   color: #fff;
-  background-color: #005FA5;
+  background-color: #0a7412;
 }
 
 @media (max-width: 768px) {
@@ -1011,9 +1011,9 @@ a {
   width: 100%;
   padding: 10px;
   font-family: "Alata", sans-serif;
-  color: #005FA5;
+  color: #0a7412;
   border-style: solid;
-  border-color: #005FA5;
+  border-color: #0a7412;
   border-width: 2px;
   text-align: center;
   border-radius: 10px;
@@ -1023,7 +1023,7 @@ a {
 
 .video_container .video .video_name:hover {
   color: #fff;
-  background-color: #005FA5;
+  background-color: #0a7412;
 }
 
 @media (max-width: 768px) {
@@ -1098,7 +1098,7 @@ a {
 
 .contact_container .contact_info .contact_details .contact_content .title {
   font-family: "Alata", sans-serif;
-  color: #005FA5;
+  color: #0a7412;
   font-size: 22px;
   text-transform: uppercase;
   padding: 0;
@@ -1129,7 +1129,7 @@ a {
 .contact_container .contact_form .inputText {
   padding: 10px;
   width: 100%;
-  border: 1px solid #005FA5;
+  border: 1px solid #0a7412;
   border-radius: 4px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -1213,7 +1213,7 @@ body.preventScroll {
 }
 
 .contact_button button {
-  background-color: #005FA5;
+  background-color: #0a7412;
   border-style: none;
   box-sizing: border-box;
   padding: 10px 20px;
@@ -1296,7 +1296,7 @@ body.preventScroll {
 }
 
 .footer {
-  background-color: #005FA5;
+  background-color: #0a7412;
   height: 150px;
   display: flex;
   align-items: center;

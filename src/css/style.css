@@ -71,12 +71,12 @@ a {
 }
 
 .header .nav_bar .nav_bar_container .nav_menu .nav_category a {
-  color: #0fff46;
+  color: #0ed566;
 }
 
 .header .nav_bar .nav_bar_container .nav_menu .active{
   border-style: solid;
-  border-color: #0fff46;
+  border-color: #0ed566;
   border-width: 0 0 2px 0;
   padding: 0 0 0 0;
 }
@@ -235,7 +235,7 @@ a {
   text-align: left;
   line-height: 2.3rem;
   min-height: 50px;
-  color: #0fff46;
+  color: #0ed566;
   box-sizing: border-box;
   padding: 0 0 0px 20px;
   width: calc(100% - 20px);

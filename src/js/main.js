@@ -269,7 +269,32 @@ $(window).scroll(function() {
           $('.nav_category a.active').removeClass('active');
           $('.nav_category a').eq(i).addClass('active');
       }
+
+     
   });
+
+  if (scrollDistance > 100){
+    // $('.nav_bar').css("background-color","#233329");
+    $('.nav_bar').addClass("nav_bar_active")
+  }   
+
+  if (scrollDistance < 100){
+    // $('.nav_bar').css("background-color","none");
+    $('.nav_bar').removeClass("nav_bar_active")
+  }   
+
+  // $('.nav_bar').onclick = function () {
+  //   console.log("nav bar");
+  //   if (scrollDistance > 10){
+  //     $(this).style.backgroundColor = "#233329";
+  //   }   
+  // };
+  
+
+  // if (scrollDistance > 10){
+  //   $('.nav_bar').style.backgroundColor = "#233329";
+  // } 
+
 }).scroll();
 
 

@@ -1614,5 +1614,30 @@ body.preventScroll {
   padding-top: 2px;
 }
 
+@media (max-width: 768px) {
+  .faq_container{
+    padding: 0 0%;
+  }
 
+  .faq_container .faq .question .text{
+    /* padding-left: 10px; */
+    width: 85%;
+  }
 
+  .faq_container .faq .question .icon{
+    /* padding-left: 10px; */
+    width: 15%;
+  }
+  
+  
+  .faq_container .faq .answer .text{
+    /* padding-left: 10px; */
+    width: 85%;
+  }
+
+  .faq_container .faq .answer .icon{
+    /* padding-left: 10px; */
+    width: 15%;
+  }
+  
+}

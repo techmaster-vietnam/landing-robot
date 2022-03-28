@@ -267,7 +267,7 @@ a {
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 840px) {
   .header .content .banner {
     width: 100%;
     /* margin-bottom: 20px; */

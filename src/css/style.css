@@ -16,7 +16,10 @@ a {
   background-image: linear-gradient( #5ac036, #3c602c  );
   background-image: -webkit-linear-gradient(0deg, rgba(52, 168, 83, 1) 0%, rgba(66, 133, 244, 1) 100%);
   background-color: #63d471;
-  background-image: linear-gradient(315deg, #63d471 0%, #233329 74%);
+  background-image: url("../img/background_final.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
 
   box-sizing: border-box;
   padding-bottom: 50px;
@@ -38,7 +41,7 @@ a {
 }
 
 .header .nav_bar_active{
-  background-color: #233329;
+  background-color: #f98e11;
 }
 
 .header .nav_bar .nav_bar_container {
@@ -196,7 +199,7 @@ a {
   max-width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -428,7 +431,7 @@ a {
   text-transform: uppercase;
   font-size: 35px;
   margin-bottom: 20px;
-  color:#0a7412;
+  color:#f98e11;
 }
 
 .section .section_container .content .content_details {
@@ -519,7 +522,7 @@ a {
   text-transform: uppercase;
   font-size: 35px;
   margin-bottom: 20px;
-  color:#0a7412;
+  color:#f98e11;
   text-align: left;
 }
 
@@ -576,7 +579,7 @@ a {
 }
 
 .display_container .course_content_container .course_content .track_container {
-  width: 100%;
+  width: 75%;
   background-color: #f2f3f7;
   display: flex;
   height: 100%;
@@ -588,9 +591,20 @@ a {
   .course_content
   .track_container
   .track_content {
-  width: 70%;
+  width: 100%;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 30px 30px 10px 30px;
+}
+
+
+.display_container .course_content_container .course_title{
+  font-family: "Alata", sans-serif;
+  /* text-transform: uppercase; */
+  font-size: 25px;
+  margin-bottom: 20px;
+  color:#f98e11;
+  text-align: left;
+  margin-left: 20px;
 }
 
 .display_container
@@ -601,9 +615,9 @@ a {
   .title {
   font-family: "Alata", sans-serif;
   text-transform: uppercase;
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 20px;
-  color:#0a7412;
+  color:#f98e11;
   text-align: left;
 }
 
@@ -653,6 +667,11 @@ a {
 }
 
 @media (max-width: 768px) {
+
+.display_container .course_content_container .course_content .track_container {
+  width: 100%;
+}
+
   .display_container
     .course_content_container
     .course_content
@@ -754,7 +773,7 @@ a {
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 10px;
-  color:#0a7412;
+  color:#f98e11;
 }
 
 .teacher_container .teacher .teacher_details p {
@@ -892,7 +911,7 @@ a {
   text-transform: uppercase;
   font-size: 22px;
   margin-bottom: 20px;
-  color:#0a7412;
+  color:#f98e11;
 }
 
 .fee_container .fee .fee_content .fee_number {
@@ -905,14 +924,14 @@ a {
   text-transform: uppercase;
   font-size: 40px;
   margin-bottom: 20px;
-  color:#0a7412;
+  color:#f98e11;
 }
 
 .fee_container .fee .fee_content .fee_number .condition {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
   line-height: 2rem;
-  color:#0a7412;
+  color:#f98e11;
 }
 
 .fee_container .fee .fee_content .fee_button {
@@ -975,9 +994,9 @@ a {
   width: 100%;
   padding: 10px;
   font-family: "Alata", sans-serif;
-  color:#0a7412;
+  color:#f98e11;
   border-style: solid;
-  border-color:#0a7412;
+  border-color:#f98e11;
   border-width: 2px;
   text-align: center;
   border-radius: 10px;
@@ -987,7 +1006,7 @@ a {
 
 .product_container .product .product_name:hover {
   color: #fff;
-  background-color:#0a7412;
+  background-color:#f98e11;
 }
 
 @media (max-width: 768px) {
@@ -1040,9 +1059,9 @@ a {
   width: 100%;
   padding: 10px;
   font-family: "Alata", sans-serif;
-  color:#0a7412;
+  color:#f98e11;
   border-style: solid;
-  border-color:#0a7412;
+  border-color:#f98e11;
   border-width: 2px;
   text-align: center;
   border-radius: 10px;
@@ -1052,7 +1071,7 @@ a {
 
 .video_container .video .video_name:hover {
   color: #fff;
-  background-color:#0a7412;
+  background-color:#f98e11;
 }
 
 @media (max-width: 768px) {
@@ -1127,7 +1146,7 @@ a {
 
 .contact_container .contact_info .contact_details .contact_content .title {
   font-family: "Alata", sans-serif;
-  color:#0a7412;
+  color:#f98e11;
   font-size: 22px;
   text-transform: uppercase;
   padding: 0;
@@ -1158,7 +1177,7 @@ a {
 .contact_container .contact_form .inputText {
   padding: 10px;
   width: 100%;
-  border: 1px solid#0a7412;
+  border: 1px solid#f98e11;
   border-radius: 4px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
@@ -1242,7 +1261,7 @@ body.preventScroll {
 }
 
 .contact_button button {
-  background-color:#0a7412;
+  background-color:#f98e11;
   border-style: none;
   box-sizing: border-box;
   padding: 10px 20px;
@@ -1325,7 +1344,7 @@ body.preventScroll {
 }
 
 .footer {
-  background-color:#0a7412;
+  background-color:#f98e11;
   height: 150px;
   display: flex;
   align-items: center;
@@ -1545,7 +1564,7 @@ body.preventScroll {
   width: 100%;
   display: flex;
   border-style: solid;
-  border-color:#0a7412;
+  border-color:#f98e11;
   background-color:#f9f9f9;
   border-width: 0px 0 0px 4px;
   box-sizing: border-box;
@@ -1572,7 +1591,7 @@ body.preventScroll {
   text-transform: uppercase;
   font-size: 35px;
   margin-bottom: 20px;
-  color: #0a7412;
+  color: #f98e11;
   text-align: center;
   padding-top: 4px;
 }

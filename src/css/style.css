@@ -866,7 +866,7 @@ a {
 
 .fee_container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   /* max-width: 840px; */
   width: 100%;
   flex-wrap: wrap;

@@ -88,7 +88,6 @@ question_icon.forEach(function(btn){
     })
 })
 
-console.log(question_icon);
 
 question_icon.forEach(function(btn){
   question_icon.onclick = function(){
@@ -316,7 +315,6 @@ $.each(dot, function (index, icon) {
   console.log("index ",  index, icon);
   icon.addEventListener('click', function(){
       slideIndex = index + 1;
-      console.log(slideIndex);
       showSlides(slideIndex);
     })
 });
@@ -329,7 +327,6 @@ let prev_btn = document.getElementById("prev_btn");
 
 prev_btn.addEventListener('click', function() {
   slideIndex--;
-  console.log(slideIndex);
   showSlides(slideIndex);
 })
 
